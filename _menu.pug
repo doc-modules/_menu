@@ -1,0 +1,23 @@
+mixin _menu()
+    +b.menu&attributes(attributes)
+        +container
+            +e.menu-inner
+                block
+
+mixin _menu__col()
+    +e.col&attributes(attributes)
+       block
+
+mixin test()
+    include ../navbar/includes
+    include ../-list/includes
+    header
+        +_menu
+            +_menu__col
+                img(src="logo")
+            +_menu__col
+                +navbar
+                    +_list
+                        +_list__li Раз
+                        +_list__li Два
+                        +_list__li Три
