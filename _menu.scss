@@ -1,11 +1,31 @@
-.menu {
+$b: ".menu";
 
-  &__inner {
+#{$b} {
+
+  width:100%;
+
+  #{$b}__inner {
     display: flex;
+    width:100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: flex-start;
+
   }
 
-  &__col {
+  #{$b}__col {
     display: inline-block;
   }
   
+}
+
+#{$b}#{$b}--vertical-middle{
+
+  #{$b}__inner{
+    align-content: center;
+    align-items: center;
+  }
+
 }

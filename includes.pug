@@ -1,2 +1,35 @@
 include _menu
 include container/includes
+include ../navbar/includes
+include ../_list/includes
+include ../_flex-line/includes
+include ../link/includes
+
+mixin _menu_test()
+    header
+        +_menu.--vertical-middle
+            +_menu__col
+                +_flex-line.--jsb.--vertical-middle
+                    +_flex-line__el
+                        img(src="http://pishevka.shablonkin.shn-host.ru/logo.png")
+                    +_flex-line__el
+                        | СЕВЕРО-ЗАПАДНАЯ
+                        br
+                        | СЫРЬЕВАЯ КОМПАНИЯ
+
+            +_menu__col
+                +navbar
+                    +_list.--row.--jsb.--vertical-middle
+                        +_list__li
+                            +link()(href="#").--header-link RU
+                        +_list__li
+                            +link()(href="#").--header-link RU
+                        +_list__li
+                            +link()(href="#")
+                                img(src="http://pishevka.shablonkin.shn-host.ru/icons/phone.png")
+                        +_list__li
+                            +link()(href="#")
+                                img(src="http://pishevka.shablonkin.shn-host.ru/icons/search.png")
+                        +_list__li
+                            +link()(href="#")
+                                img(src="http://pishevka.shablonkin.shn-host.ru/icons/hamburger.png")
